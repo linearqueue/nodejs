@@ -30,6 +30,13 @@ app.use("/", (req, res) => {
   res.send("this is home page");
 });
 
+app.use("user/:userId", (req, res) => {
+  console.log(req.params);
+  res.send("this is parameters");
+});
+
 app.listen(3000, () => {
   console.log("this is running on the port 3000");
 });
+
+// completed till 17 at 50 min
